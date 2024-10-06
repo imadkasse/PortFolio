@@ -8,9 +8,12 @@ import Skills from "@/components/Skills";
 import Testimonials from "@/components/testimonials/Testimonials";
 import { Contact } from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { getTranslations } from "next-intl/server";
 
-export default function Home() {
-  const words = `Nulla sunt labore qui esse voluptate in magna quis elit. Quis sint eiusmod aute irure do id dolore ipsum ex non consequat id sunt enim. Ea nostrud dolor cupidatat non et.`;
+export default async function Home() {
+  const t = await getTranslations("HomePage");
+
+  const words = t("aboutMe");
   return (
     <main className="bg-black/[0.96]  ">
       <NavBar />
@@ -35,7 +38,7 @@ export default function Home() {
           <div className="text-white">
             <Image
               alt="profileImg"
-              src="/imgs/avatar.png"
+              src="/imgs/LogoForMe.png"
               width={250}
               height={100}
               className="max-w-96 md:h-[60vh] h-[50vh]  sm:w-full object-cover  border-2 rounded-lg border-purple-900/20 hover:border-purple-900  transition duration-200 cursor-pointer"
@@ -50,9 +53,9 @@ export default function Home() {
         <Skills />
       </div>
       {/* testimonials not show in browser becuse not have a data  */}
-      <div id="testimonials" className="my-16 container mx-auto ">
+      {/* <div id="testimonials" className="my-16 container mx-auto ">
         <Testimonials />
-      </div>
+      </div> */}
       <div id="contact" className="my-16 container mx-auto ">
         <Contact />
       </div>

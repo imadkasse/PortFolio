@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { Spotlight } from "./ui/Spotlight";
 
 const Projects = () => {
   const variants: Variants = {
@@ -82,7 +83,7 @@ const Projects = () => {
                     initial="hidden"
                     variants={variants}
                     transition={{ duration: 0.4 }}
-                    whileHover="visible" // تطبيق الحركة عند التفاعل
+                    whileHover="visible"
                   >
                     <div className="text-center flex items-center flex-col w-full h-full justify-center">
                       <h3 className="text-xl font-bold">{project.title}</h3>
@@ -121,6 +122,14 @@ const Projects = () => {
             Not Found Any Project{" "}
           </h1>
         )}
+      </div>
+      <div className="flex items-center justify-center mt-8 xs:px-10 md:px-12">
+        <Link
+          href="/projects"
+          className="bg-gradient-to-r from-purple-700 to-gray-400 p-2 rounded-md   transition-all duration-300 hover:to-gray-400/50 hover:from-purple-700/40 "
+        >
+          View More
+        </Link>
       </div>
     </div>
   );

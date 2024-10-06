@@ -69,20 +69,20 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <a
-                    href="javascript:void(0)"
+                  <Link
+                    href="/"
                     className="text-gray-300 hover:text-white text-sm"
                   >
                     Phone
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="javascript:void(0)"
+                  <Link
+                    href="/"
                     className="text-gray-300 hover:text-white text-sm"
                   >
                     Address
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

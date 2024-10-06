@@ -17,8 +17,6 @@ export const Contact = () => {
   //snakBar
   const [open, setOpen] = useState<boolean>(false);
 
-
-
   const handleClose = (
     event: React.SyntheticEvent | Event,
     reason?: SnackbarCloseReason
@@ -74,7 +72,7 @@ export const Contact = () => {
       )
       .then(
         (result) => {
-          setOpen(true)
+          setOpen(true);
           setStatus("Message sent successfully!");
           // إعادة تعيين القيم في حالة الحقول المنفصلة
           setName("");
@@ -116,8 +114,8 @@ export const Contact = () => {
                     <FontAwesomeIcon icon={faEnvelope} size="xl" />
                     <h1 className="text-lg">EMAIL</h1>
                   </div>
-                  <p className="pl-8 text-secondary-day dark:text-secondary-night text-md capitalize">
-                    contact@imadka.com
+                  <p className="pl-8 text-secondary-day dark:text-secondary-night text-md lowercase">
+                    contact@imadkasse.com
                   </p>
                 </div>
                 <div className="flex flex-col pr-14 justify-center  mt-9">
@@ -136,7 +134,8 @@ export const Contact = () => {
                   </div>
                   <div className="pl-6 mt-3 flex gap-3">
                     <Link
-                      href="/"
+                      href="https://www.facebook.com/profile.php?id=61565516926135&locale=ar_AR"
+                      target="_blank"
                       className="relative inline-flex items-center justify-center p-2 border rounded-full overflow-hidden group"
                     >
                       <span className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -147,7 +146,8 @@ export const Contact = () => {
                     </Link>
 
                     <Link
-                      href="/"
+                      href="https://www.instagram.com/imad_kasse/"
+                      target="_blank"
                       className="relative inline-flex items-center justify-center p-2 border rounded-full overflow-hidden group"
                     >
                       <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-orange-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -158,7 +158,8 @@ export const Contact = () => {
                     </Link>
 
                     <Link
-                      href="/"
+                      href="https://www.linkedin.com/in/imad-kasse-565b84330/"
+                      target="_blank"
                       className="relative inline-flex items-center justify-center p-2 border rounded-full overflow-hidden group"
                     >
                       <span className="absolute inset-0 bg-gradient-to-r from-blue-800 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -183,7 +184,7 @@ export const Contact = () => {
                     placeholder="kasse imad"
                     value={name}
                     onChange={handleChangeName}
-                    className="px-4 py-2 text-base rounded-md bg-transparent border border-gray-400 w-full outline-blue-500"
+                    className="px-4 py-2 text-base rounded-md bg-transparent border border-gray-400 w-full outline-purple-500 "
                   />
                 </div>
                 <div>
@@ -196,7 +197,7 @@ export const Contact = () => {
                     placeholder="Example@ex.com"
                     value={email}
                     onChange={handleChangeEmail}
-                    className="px-4 py-2 text-base rounded-md bg-transparent border border-gray-400 w-full outline-blue-500"
+                    className="px-4 py-2 text-base rounded-md bg-transparent border border-gray-400 w-full outline-purple-500"
                   />
                 </div>
                 <div>
@@ -208,7 +209,7 @@ export const Contact = () => {
                     placeholder="Your Message"
                     value={message}
                     onChange={handleChangeMsg}
-                    className="p-4 bg-transparent  w-full block text-sm border border-gray-400 outline-[#007bff] rounded"
+                    className="p-4 bg-transparent  w-full block text-sm border border-gray-400 outline-purple-500 rounded"
                     // rows="4"
                   />
                 </div>

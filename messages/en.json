@@ -1,0 +1,10 @@
+{
+  "HomePage": {
+    "home": "Home",
+    "projects": "Projects",
+    "skills": "Skills",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "aboutMe": " I am a passionate web developer with a keen interest in creating dynamic and user-friendly websites."
+  }
+}
