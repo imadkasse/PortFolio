@@ -11,7 +11,7 @@ const page = () => {
         className="-top-40 left-0 md:left-60 md:-top-20 purple "
         fill="purple"
       />
-      <div className="text-white">
+      <div className="text-white container mx-auto">
         <Projects />
       </div>
     </div>

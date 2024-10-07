@@ -11,7 +11,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import LanguageSwitcher from "./langSwitcher/LangSwitcher";
-import { useTranslation } from "react-i18next";
 import { useTranslations } from "next-intl";
 
 const NavBar = () => {
@@ -63,10 +62,13 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="flex gap-3">
-          <button className="bg-gradient-to-r from-purple-700 to-gray-400 p-2 rounded-md hover:rounded-2xl transition-all duration-300 flex items-center gap-2">
+          <Link
+            href="https://wa.me/213675416320"
+            className="bg-gradient-to-r from-purple-700 to-gray-400 p-2 rounded-md hover:rounded-2xl transition-all duration-300 flex items-center gap-2"
+          >
             <h1>Let`s Talk</h1>
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-          </button>
+          </Link>
           <button className="md:hidden" onClick={() => setMenu(true)}>
             <FontAwesomeIcon icon={faBars} size="lg" />
           </button>
@@ -95,14 +97,12 @@ const NavBar = () => {
             </button>
             <ul className="flex flex-col items-center w-full h-full gap-5">
               <li>
-                <ScrollLink
-                  to="home"
-                  smooth={true}
-                  duration={500}
+                <Link
+                  href="/"
                   className="hover:text-purple-400 text-lg transition duration-150 cursor-pointer"
                 >
                   Home
-                </ScrollLink>
+                </Link>
               </li>
               <li>
                 <ScrollLink

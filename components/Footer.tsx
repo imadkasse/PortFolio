@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="lg:flex lg:items-center">
               <ul className="flex space-x-6">
                 <li>
-                  <Link href="/">
+                  <Link href="https://www.facebook.com/profile.php?id=61565516926135&locale=ar_AR">
                     <Facebook
                       fontSize="large"
                       className="text-gray-300 hover:text-white "
@@ -39,7 +39,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="https://www.instagram.com/imad_kasse/">
                     <Instagram
                       fontSize="large"
                       className="text-gray-300 hover:text-white "
@@ -47,7 +47,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="https://www.linkedin.com/in/imad-kasse-565b84330/">
                     <LinkedIn
                       fontSize="large"
                       className="text-gray-300 hover:text-white "
@@ -59,10 +59,10 @@ const Footer = () => {
 
             <div className="text-center flex items-center justify-evenly gap-5">
               <h4 className="text-lg font-semibold  text-white">Links</h4>
-              <ul className="grow flex justify-between ">
+              <ul className="grow flex gap-4 ">
                 <li>
                   <Link
-                    href="/"
+                    href="mailto:contact@imadkasse.com"
                     className="text-gray-300 hover:text-white text-sm"
                   >
                     Email
@@ -70,18 +70,11 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/"
+                    href="https://wa.me/213675416320"
+                    target="_blank"
                     className="text-gray-300 hover:text-white text-sm"
                   >
                     Phone
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/"
-                    className="text-gray-300 hover:text-white text-sm"
-                  >
-                    Address
                   </Link>
                 </li>
               </ul>
@@ -90,9 +83,9 @@ const Footer = () => {
 
           <p className="text-gray-300 text-sm mt-10 text-center">
             © 2024
-            <a href="/" target="_blank" className="hover:underline mx-1">
+            <Link href="/" target="_blank" className="hover:underline mx-1">
               Imad
-            </a>
+            </Link>
             All Rights Reserved.
           </p>
         </footer>
