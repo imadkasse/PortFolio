@@ -1,6 +1,7 @@
 "use client";
 
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, BookmarkPlus, Check } from "lucide-react";
+// import { useCart } from "./CartContext";
 import { 
   SiNextdotjs, 
   SiExpress, 
@@ -39,6 +40,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({
+  id,
   title,
   description,
   tech,
@@ -47,32 +49,55 @@ export function ProjectCard({
   githubUrl,
   highlights,
 }: ProjectCardProps) {
+  // const { addItem, removeItem, isInCart } = useCart();
+  // const inCart = isInCart(id);
+
+  // const handleCartToggle = (e: React.MouseEvent) => {
+  //   e.preventDefault();
+  //   if (inCart) {
+  //     removeItem(id);
+  //   } else {
+  //     addItem({ id, title, description, tech, role, demoUrl, githubUrl, highlights });
+  //   }
+  // };
+
   return (
-    <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10 hover:border-indigo-500/50 transition-all">
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+    <div className="group relative overflow-hidden bg-[--card] border border-[--border] hover:border-[--primary] transition-all duration-300">
+      <div className="absolute top-0 left-0 w-1 h-full bg-[--primary] -translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
       <div className="relative p-5 sm:p-6 space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
           <div className="space-y-1">
-            <span className="text-xs font-medium text-indigo-400 uppercase tracking-wider">{role}</span>
-            <h3 className="text-xl sm:text-2xl font-bold">{title}</h3>
+            <span className="text-label text-[--primary]">{role}</span>
+            <h3 className="font-display text-h3 font-bold">{title}</h3>
           </div>
           <div className="flex gap-2">
+            {/* <button
+              onClick={handleCartToggle}
+              className={`p-2 border transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--primary] ${
+                inCart
+                  ? "bg-[--primary] border-[--primary] text-[--primary-foreground]"
+                  : "border-[--border] hover:border-[--primary] hover:text-[--primary]"
+              }`}
+              aria-label={inCart ? "Remove from collection" : "Add to collection"}
+            >
+              {inCart ? <Check className="h-4 w-4" /> : <BookmarkPlus className="h-4 w-4" />}
+            </button> */}
             <a 
               href={githubUrl}
-              className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all"
+              className="p-2 border border-[--border] hover:border-[--primary] hover:text-[--primary] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--primary]"
             >
               <Github className="h-4 w-4" />
             </a>
             <a 
               href={demoUrl}
-              className="p-2 rounded-lg bg-indigo-500 hover:bg-indigo-400 transition-all"
+              className="p-2 bg-[--primary] hover:bg-[--primary]/90 text-[--primary-foreground] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--primary]"
             >
               <ExternalLink className="h-4 w-4" />
             </a>
           </div>
         </div>
 
-        <p className="text-slate-400 text-sm sm:text-base leading-relaxed">{description}</p>
+        <p className="text-body-sm text-[--muted-foreground] max-w-[65ch]">{description}</p>
 
         <div className="flex flex-wrap gap-2">
           {tech.map(({ name }) => {
@@ -83,7 +108,7 @@ export function ProjectCard({
             return (
               <span 
                 key={name}
-                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-white/10 text-slate-300"
+                className="inline-flex items-center gap-1.5 px-3 py-1 text-caption font-medium bg-[--secondary] text-[--secondary-foreground]"
               >
                 {Icon && <Icon className="h-3 w-3" style={{ color }} />}
                 {name}
@@ -92,13 +117,13 @@ export function ProjectCard({
           })}
         </div>
 
-        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 pt-2">
+        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-2 pt-2">
           {highlights.map((highlight) => (
             <li 
               key={highlight}
-              className="flex items-center gap-2 text-xs text-slate-400"
+              className="flex items-center gap-2 text-caption text-[--muted-foreground]"
             >
-              <span className="h-1 w-1 rounded-full bg-cyan-400 flex-shrink-0" />
+              <span className="h-1 w-1 bg-[--primary] flex-shrink-0" />
               <span className="line-clamp-2">{highlight}</span>
             </li>
           ))}

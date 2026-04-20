@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Unbounded, Questrial } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({ 
+const unbounded = Unbounded({
   subsets: ["latin"],
-  variable: "--font-inter"
+  variable: "--font-display",
+  weight: ["400", "600", "700", "800", "900"],
+  display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
+const questrial = Questrial({
   subsets: ["latin"],
-  variable: "--font-space"
+  variable: "--font-body",
+  weight: "400",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
+      <body className={`${unbounded.variable} ${questrial.variable} font-body antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

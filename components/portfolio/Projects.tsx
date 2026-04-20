@@ -4,14 +4,12 @@ import { ProjectCard } from "./ProjectCard";
 
 export function Projects() {
   return (
-    <section id="projects" className="space-y-8">
-      <div className="flex items-center gap-4">
-        <div className="h-px flex-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
-        <h2 className="text-3xl font-black tracking-tight">PROJECTS</h2>
-        <div className="h-px flex-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
-      </div>
+    <section id="projects">
+      <header className="mb-10">
+        <h2 className="font-display text-xl sm:text-2xl font-black tracking-tight">PROJECTS</h2>
+      </header>
 
-      <div className="grid gap-5">
+      <div className="grid gap-8">
         {projects.map((project) => (
           <ProjectCard
             key={project.id}

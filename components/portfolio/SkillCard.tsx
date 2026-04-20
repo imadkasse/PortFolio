@@ -42,17 +42,22 @@ export function SkillCard({ name, index }: SkillCardProps) {
 
   return (
     <div 
-      className="group relative p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-500/50 hover:bg-white/10 transition-all cursor-default"
-      style={{ animationDelay: `${index * 50}ms` }}
+      className="group relative p-4 bg-[--card] border border-[--border] hover:border-[--primary] hover:bg-[--secondary] hover-lift cursor-default"
+      style={{ 
+        animationDelay: `${index * 50}ms`,
+        transitionProperty: "border-color, background-color, transform",
+        transitionDuration: "300ms",
+        transitionTimingFunction: "cubic-bezier(0.25, 1, 0.5, 1)"
+      }}
     >
       <div className="flex items-center gap-3">
         {Icon && (
           <Icon 
-            className="h-5 w-5 group-hover:scale-110 transition-transform" 
+            className="h-5 w-5 transition-transform group-hover:scale-110" 
             style={{ color }}
           />
         )}
-        <span className="font-medium">{name}</span>
+        <span className="font-medium transition-transform group-hover:translate-x-1">{name}</span>
       </div>
     </div>
   );

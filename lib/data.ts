@@ -94,6 +94,17 @@ export const personal = {
   role: "Fullstack Web Developer",
   summary:
     "Fullstack web developer with strong experience in JavaScript and modern web technologies. I build production-ready applications with real deployment experience using Docker and VPS environments. Passionate about scalable systems, clean architecture, and continuous learning.",
+  about: [
+    "Building production-ready applications with real deployment experience",
+    "Passionate about clean architecture and scalable systems",
+    "Continuous learner staying current with modern technologies",
+    "Focused on creating impactful digital experiences",
+  ],
+  stats: {
+    yearsExp: "3+",
+    projectsBuilt: "10+",
+    deploysDone: "50+",
+  },
   email: "kasseimad81@gmail.com",
   github: "https://github.com/imadkasse/",
   linkedin: "https://www.linkedin.com/in/imad-kasse-8a52ab2a8/",
