@@ -35,7 +35,7 @@ export default function RootLayout({
         className={`${unbounded.variable} ${questrial.variable} font-body antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange>
           {children}
