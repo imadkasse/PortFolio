@@ -101,7 +101,7 @@ export const personal = {
     "Focused on creating impactful digital experiences",
   ],
   stats: {
-    yearsExp: "3+",
+    yearsExp: "4+",
     projectsBuilt: "10+",
     deploysDone: "50+",
   },

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Unbounded, Questrial } from "next/font/google";
+//@ts-ignore
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -19,7 +20,8 @@ const questrial = Questrial({
 
 export const metadata: Metadata = {
   title: "Imad Kasse | Fullstack Web Developer",
-  description: "Fullstack Web Developer specializing in Next.js, NestJS, and modern web technologies",
+  description:
+    "Fullstack Web Developer specializing in Next.js, NestJS, and modern web technologies",
 };
 
 export default function RootLayout({
@@ -29,13 +31,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${unbounded.variable} ${questrial.variable} font-body antialiased`}>
+      <body
+        className={`${unbounded.variable} ${questrial.variable} font-body antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
-          disableTransitionOnChange
-        >
+          disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>
