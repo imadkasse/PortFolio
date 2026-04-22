@@ -1,16 +1,20 @@
 export const skills = [
-  { name: "JavaScript", category: "Frontend" },
-  { name: "TypeScript", category: "Frontend" },
-  { name: "Python", category: "Backend" },
+  { name: "React", category: "Frontend" },
   { name: "Next.js", category: "Frontend" },
+  { name: "Vue.js", category: "Frontend" },
+  { name: "Nuxt.js", category: "Frontend" },
+  { name: "TypeScript", category: "Frontend" },
+  { name: "JavaScript", category: "Frontend" },
+  { name: "Tailwind CSS", category: "Frontend" },
   { name: "NestJS", category: "Backend" },
   { name: "Express.js", category: "Backend" },
-  { name: "Tailwind CSS", category: "Frontend" },
+  { name: "Python", category: "Backend" },
   { name: "Docker", category: "DevOps" },
-  { name: "Git", category: "Tools" },
+  { name: "System Design", category: "DevOps" },
   { name: "MongoDB", category: "Database" },
   { name: "PostgreSQL", category: "Database" },
   { name: "Redis", category: "Database" },
+  { name: "Git", category: "Tools" },
 ];
 
 export const projects = [
@@ -21,13 +25,13 @@ export const projects = [
       "A production-ready e-learning platform with multi-role access (Admin, Teacher, Student), secure video streaming, real-time ticket system, and full deployment infrastructure.",
     tech: [
       { name: "Next.js" },
+      { name: "React" },
       { name: "Express.js" },
       { name: "MongoDB" },
       { name: "Tailwind CSS" },
       { name: "Docker" },
       { name: "Socket.io" },
       { name: "Cloudinary" },
-      { name: "React" },
     ],
     role: "Fullstack Developer",
     demoUrl: "https://digitalustadacademy.com/",
@@ -91,12 +95,12 @@ export const languages = [
 
 export const personal = {
   name: "Imad Kasse",
-  role: "Fullstack Web Developer",
+  role: "Fullstack Software Engineer",
   summary:
-    "Fullstack web developer with strong experience in JavaScript and modern web technologies. I build production-ready applications with real deployment experience using Docker and VPS environments. Passionate about scalable systems, clean architecture, and continuous learning.",
+    "Fullstack software engineer with strong experience in JavaScript, React, Vue, and modern web technologies. I build scalable, production-ready applications with real deployment experience using Docker, system design, and cloud infrastructure. Passionate about clean architecture, scalable systems, and continuous learning.",
   about: [
-    "Building production-ready applications with real deployment experience",
-    "Passionate about clean architecture and scalable systems",
+    "Building scalable, production-ready applications with real deployment experience",
+    "Passionate about clean architecture and system design",
     "Continuous learner staying current with modern technologies",
     "Focused on creating impactful digital experiences",
   ],

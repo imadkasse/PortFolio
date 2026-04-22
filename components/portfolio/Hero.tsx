@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { personal } from "@/lib/data";
-import { Github, Linkedin, Mail, ArrowRight, Code2, Sparkles, MapPin, Calendar } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowRight, Code2, Sparkles, MapPin, Calendar, Layers } from "lucide-react";
 
 export function Hero() {
   const firstName = personal.name.split(" ")[0];
@@ -28,7 +28,7 @@ export function Hero() {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[--secondary]">
               <Code2 className="h-3.5 w-3.5 text-[--primary]" />
               <span className="text-label">
-                Fullstack Developer
+                Software Engineering
               </span>
             </div>
             
