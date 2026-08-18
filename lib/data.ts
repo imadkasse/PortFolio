@@ -58,7 +58,7 @@ export const projects = [
       { name: "Node.js" },
     ],
     role: "Fullstack Developer",
-    demoUrl: "https://www.sehatte.com/",
+    demoUrl: "https://frontend-teal-nu-15.vercel.app/",
     githubUrl: "https://github.com/imadkasse/",
     highlights: [
       "Online appointment booking system",
