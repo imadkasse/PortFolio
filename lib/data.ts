@@ -34,7 +34,7 @@ export const projects = [
       { name: "Cloudinary" },
     ],
     role: "Fullstack Developer",
-    demoUrl: "https://digitalustadacademy.com/",
+    demoUrl: "https://learn.digitalustadacademy.com/",
     githubUrl: "https://github.com/imadkasse/",
     highlights: [
       "Multi-role system (Admin, Teacher, Student)",
