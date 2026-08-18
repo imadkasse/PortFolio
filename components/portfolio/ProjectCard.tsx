@@ -2,30 +2,39 @@
 
 import { Github, ExternalLink, BookmarkPlus, Check } from "lucide-react";
 // import { useCart } from "./CartContext";
-import { 
-  SiNextdotjs, 
-  SiExpress, 
-  SiMongodb, 
-  SiTailwindcss, 
-  SiDocker, 
+import {
+  SiNextdotjs,
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+  SiDocker,
   SiSocketdotio,
   SiCloudinary,
   SiReact,
   SiNodedotjs,
-  SiNestjs
+  SiNestjs,
 } from "react-icons/si";
 
-const techIconMap: Record<string, { Icon: React.ComponentType<{ className?: string; style?: React.CSSProperties }>; color: string }> = {
+const techIconMap: Record<
+  string,
+  {
+    Icon: React.ComponentType<{
+      className?: string;
+      style?: React.CSSProperties;
+    }>;
+    color: string;
+  }
+> = {
   "Next.js": { Icon: SiNextdotjs, color: "#ffffff" },
   "Express.js": { Icon: SiExpress, color: "#ffffff" },
-  "MongoDB": { Icon: SiMongodb, color: "#47A248" },
+  MongoDB: { Icon: SiMongodb, color: "#47A248" },
   "Tailwind CSS": { Icon: SiTailwindcss, color: "#06B6D4" },
-  "Docker": { Icon: SiDocker, color: "#2496ED" },
+  Docker: { Icon: SiDocker, color: "#2496ED" },
   "Socket.io": { Icon: SiSocketdotio, color: "#010101" },
-  "Cloudinary": { Icon: SiCloudinary, color: "#3448C5" },
-  "React": { Icon: SiReact, color: "#61DAFB" },
+  Cloudinary: { Icon: SiCloudinary, color: "#3448C5" },
+  React: { Icon: SiReact, color: "#61DAFB" },
   "Node.js": { Icon: SiNodedotjs, color: "#339933" },
-  "NestJS": { Icon: SiNestjs, color: "#E0234E" },
+  NestJS: { Icon: SiNestjs, color: "#E0234E" },
 };
 
 interface ProjectCardProps {
@@ -82,34 +91,35 @@ export function ProjectCard({
             >
               {inCart ? <Check className="h-4 w-4" /> : <BookmarkPlus className="h-4 w-4" />}
             </button> */}
-            <a 
+            <a
               href={githubUrl}
-              className="p-2 border border-[--border] hover:border-[--primary] hover:text-[--primary] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--primary]"
-            >
+              target="_blank"
+              className="p-2 border border-[--border] hover:border-[--primary] hover:text-[--primary] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--primary]">
               <Github className="h-4 w-4" />
             </a>
-            <a 
+            <a
               href={demoUrl}
-              className="p-2 bg-[--primary] hover:bg-[--primary]/90 text-[--primary-foreground] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--primary]"
-            >
+              target="_blank"
+              className="p-2 bg-[--primary] hover:bg-[--primary]/90 text-[--primary-foreground] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--primary]">
               <ExternalLink className="h-4 w-4" />
             </a>
           </div>
         </div>
 
-        <p className="text-body-sm text-[--muted-foreground] max-w-[65ch]">{description}</p>
+        <p className="text-body-sm text-[--muted-foreground] max-w-[65ch]">
+          {description}
+        </p>
 
         <div className="flex flex-wrap gap-2">
           {tech.map(({ name }) => {
             const iconData = techIconMap[name];
             const Icon = iconData?.Icon;
             const color = iconData?.color;
-            
+
             return (
-              <span 
+              <span
                 key={name}
-                className="inline-flex items-center gap-1.5 px-3 py-1 text-caption font-medium bg-[--secondary] text-[--secondary-foreground]"
-              >
+                className="inline-flex items-center gap-1.5 px-3 py-1 text-caption font-medium bg-[--secondary] text-[--secondary-foreground]">
                 {Icon && <Icon className="h-3 w-3" style={{ color }} />}
                 {name}
               </span>
@@ -119,10 +129,9 @@ export function ProjectCard({
 
         <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-2 pt-2">
           {highlights.map((highlight) => (
-            <li 
+            <li
               key={highlight}
-              className="flex items-center gap-2 text-caption text-[--muted-foreground]"
-            >
+              className="flex items-center gap-2 text-caption text-[--muted-foreground]">
               <span className="h-1 w-1 bg-[--primary] flex-shrink-0" />
               <span className="line-clamp-2">{highlight}</span>
             </li>
