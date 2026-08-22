@@ -15,6 +15,7 @@ import {
   SiNestjs,
   SiSupabase,
   SiPwa,
+  SiTypescript,
 } from "react-icons/si";
 
 const techIconMap: Record<
@@ -39,6 +40,7 @@ const techIconMap: Record<
   NestJS: { Icon: SiNestjs, color: "#E0234E" },
   PWA: { Icon: SiPwa, color: "#5A0FC8" },
   Supabase: { Icon: SiSupabase, color: "#3ECF8E" },
+  TypeScript: { Icon: SiTypescript, color: "#3178C6" },
 };
 
 interface ProjectCardProps {
