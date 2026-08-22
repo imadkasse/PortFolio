@@ -68,6 +68,29 @@ export const projects = [
       "Database hosted on MongoDB Atlas",
     ],
   },
+  {
+    id: "berlin-food",
+    title: "Berlin Food",
+    description:
+      "A food delivery platform for the city of Berlin, built with modern web technologies and a focus on user experience.",
+    tech: [
+      { name: "Next.js" },
+      { name: "Supabase" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "PWA" },
+      { name: "Node.js" },
+    ],
+    role: "Fullstack Developer",
+    demoUrl: "https://berlin-food.vercel.app/",
+    githubUrl: "https://github.com/imadkasse/berlin_food",
+    highlights: [
+      "Online food ordering and delivery system",
+      "Real-time tracking of orders and deliveries",
+      "Data validation and secure backend architecture",
+      "Supabase integration for real-time updates , authentication , storage , and database management  ",
+    ],
+  },
 ];
 
 export const education = [

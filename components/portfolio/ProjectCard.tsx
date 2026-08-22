@@ -13,6 +13,8 @@ import {
   SiReact,
   SiNodedotjs,
   SiNestjs,
+  SiSupabase,
+  SiPwa,
 } from "react-icons/si";
 
 const techIconMap: Record<
@@ -30,11 +32,13 @@ const techIconMap: Record<
   MongoDB: { Icon: SiMongodb, color: "#47A248" },
   "Tailwind CSS": { Icon: SiTailwindcss, color: "#06B6D4" },
   Docker: { Icon: SiDocker, color: "#2496ED" },
-  "Socket.io": { Icon: SiSocketdotio, color: "#010101" },
+  "Socket.io": { Icon: SiSocketdotio, color: "#ffffff" },
   Cloudinary: { Icon: SiCloudinary, color: "#3448C5" },
   React: { Icon: SiReact, color: "#61DAFB" },
   "Node.js": { Icon: SiNodedotjs, color: "#339933" },
   NestJS: { Icon: SiNestjs, color: "#E0234E" },
+  PWA: { Icon: SiPwa, color: "#5A0FC8" },
+  Supabase: { Icon: SiSupabase, color: "#3ECF8E" },
 };
 
 interface ProjectCardProps {
@@ -127,7 +131,7 @@ export function ProjectCard({
           })}
         </div>
 
-        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-2 pt-2">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-2 pt-2">
           {highlights.map((highlight) => (
             <li
               key={highlight}
